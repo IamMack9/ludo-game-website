@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Terms & Conditions – Ludo Master X</title>
 
   <style>
@@ -18,33 +19,80 @@
       line-height: 1.7;
     }
 
+    /* Navigation */
+    nav {
+      background: #091a2e;
+      border-bottom: 1px solid #193653;
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: #ffd54a;
+      font-size: 21px;
+      font-weight: bold;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      color: #dbe7f3;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #ffd54a;
+    }
+
+    /* Header */
     header {
-      padding: 40px 20px;
+      padding: 55px 20px;
       text-align: center;
       background: linear-gradient(135deg, #0b1f3a, #102d52);
     }
 
     header h1 {
       margin: 0 0 10px;
-      font-size: 34px;
+      font-size: 36px;
     }
 
     header p {
       margin: 0;
       color: #b9c7d8;
+      font-size: 17px;
     }
 
+    /* Main */
     main {
       max-width: 900px;
-      margin: 30px auto;
+      margin: 40px auto;
       padding: 0 20px;
     }
 
     section {
       background: #0d2038;
-      padding: 24px;
+      padding: 26px;
       margin-bottom: 20px;
-      border-radius: 16px;
+      border-radius: 18px;
       border: 1px solid #193653;
     }
 
@@ -53,134 +101,243 @@
       margin-top: 0;
     }
 
+    section p {
+      color: #d5deea;
+    }
+
+    a {
+      color: #66b3ff;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 30px 20px;
+      padding: 35px 20px;
       color: #8fa3b8;
+      border-top: 1px solid #193653;
+      margin-top: 30px;
+    }
+
+    footer a {
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+
+      .nav-container {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      header h1 {
+        font-size: 30px;
+      }
+
+      main {
+        margin-top: 25px;
+      }
+
+      section {
+        padding: 22px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Terms & Conditions</h1>
-  <p>Ludo Master X</p>
-</header>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
 
-<main>
+      <a class="logo" href="index.html">
+        🎲 Ludo Master X
+      </a>
 
-<section>
-  <h2>1. Acceptance of Terms</h2>
-  <p>
-    By downloading, installing, or using Ludo Master X, you agree to these
-    Terms & Conditions. If you do not agree with these terms, please do not
-    use the application.
-  </p>
-</section>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
 
-<section>
-  <h2>2. About the Game</h2>
-  <p>
-    Ludo Master X is a digital Ludo game designed for entertainment.
-    The game may support local gameplay and computer-controlled opponents.
-  </p>
-</section>
+    </div>
+  </nav>
 
-<section>
-  <h2>3. Gameplay</h2>
-  <p>
-    Gameplay is based on traditional Ludo rules as implemented within the
-    application. Game features and rules may be updated or improved in
-    future versions.
-  </p>
-</section>
 
-<section>
-  <h2>4. Advertisements</h2>
-  <p>
-    Ludo Master X may display advertisements provided by third-party
-    advertising services such as Google AdMob.
-  </p>
+  <!-- Page Header -->
+  <header>
+    <h1>Terms & Conditions</h1>
+    <p>Ludo Master X</p>
+  </header>
 
-  <p>
-    Advertisement availability, placement, and frequency may change over
-    time.
-  </p>
-</section>
 
-<section>
-  <h2>5. Intellectual Property</h2>
-  <p>
-    The Ludo Master X name, application design, graphics, sounds, software,
-    and other original content are protected by applicable intellectual
-    property laws unless otherwise stated.
-  </p>
-</section>
+  <!-- Content -->
+  <main>
 
-<section>
-  <h2>6. Prohibited Use</h2>
-  <p>
-    You agree not to modify, reverse engineer, distribute, misuse, or
-    interfere with the application or its services in ways that violate
-    applicable laws or these Terms.
-  </p>
-</section>
+    <section>
+      <h2>1. Acceptance of Terms</h2>
 
-<section>
-  <h2>7. Availability</h2>
-  <p>
-    We may update, modify, suspend, or discontinue parts of the application
-    at any time without prior notice.
-  </p>
-</section>
+      <p>
+        By downloading, installing, or using Ludo Master X, you agree
+        to these Terms & Conditions. If you do not agree with these
+        terms, please do not use the application.
+      </p>
+    </section>
 
-<section>
-  <h2>8. Disclaimer</h2>
-  <p>
-    Ludo Master X is provided for entertainment purposes. We make reasonable
-    efforts to keep the application functional, but we do not guarantee that
-    it will always be available, error-free, or compatible with every device.
-  </p>
-</section>
 
-<section>
-  <h2>9. Limitation of Liability</h2>
-  <p>
-    To the extent permitted by applicable law, the developer will not be
-    responsible for indirect or consequential losses resulting from the use
-    or inability to use the application.
-  </p>
-</section>
+    <section>
+      <h2>2. About the Game</h2>
 
-<section>
-  <h2>10. Changes to These Terms</h2>
-  <p>
-    These Terms & Conditions may be updated from time to time. Updated terms
-    will be published on this page.
-  </p>
-</section>
+      <p>
+        Ludo Master X is a digital Ludo game designed for entertainment.
+        The game may support local gameplay and computer-controlled
+        opponents.
+      </p>
+    </section>
 
-<section>
-  <h2>11. Contact</h2>
-  <p>
-    If you have questions regarding these Terms & Conditions, please use the
-    contact information provided on the Ludo Master X website.
-  </p>
-</section>
 
-<section>
-  <h2>12. Last Updated</h2>
-  <p>
-    Last updated: October 2026
-  </p>
-</section>
+    <section>
+      <h2>3. Gameplay</h2>
 
-</main>
+      <p>
+        Gameplay is based on traditional Ludo rules as implemented
+        within the application. Game features and rules may be updated,
+        improved, or changed in future versions.
+      </p>
+    </section>
 
-<footer>
-  © 2026 Ludo Master X. All rights reserved.
-</footer>
+
+    <section>
+      <h2>4. Advertisements</h2>
+
+      <p>
+        Ludo Master X may display advertisements provided by
+        third-party advertising services such as Google AdMob.
+      </p>
+
+      <p>
+        Advertisement availability, placement, and frequency may
+        change over time.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>5. Intellectual Property</h2>
+
+      <p>
+        The Ludo Master X name, application design, graphics, sounds,
+        software, and other original content are protected by applicable
+        intellectual property laws unless otherwise stated.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>6. Prohibited Use</h2>
+
+      <p>
+        You agree not to modify, reverse engineer, distribute, misuse,
+        or interfere with the application in ways that violate applicable
+        laws or these Terms.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>7. Availability and Updates</h2>
+
+      <p>
+        We may update, modify, suspend, or discontinue parts of the
+        application at any time. Features may change as the application
+        is improved.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>8. Disclaimer</h2>
+
+      <p>
+        Ludo Master X is provided for entertainment purposes. We make
+        reasonable efforts to keep the application functional, but we
+        do not guarantee that it will always be available, error-free,
+        or compatible with every device.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>9. Limitation of Liability</h2>
+
+      <p>
+        To the extent permitted by applicable law, the developer will
+        not be responsible for indirect or consequential losses resulting
+        from the use or inability to use the application.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>10. Changes to These Terms</h2>
+
+      <p>
+        These Terms & Conditions may be updated from time to time.
+        Updated terms will be published on this page.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>11. Contact</h2>
+
+      <p>
+        If you have questions regarding these Terms & Conditions,
+        please contact us at:
+      </p>
+
+      <p>
+        <strong>
+          <a href="mailto:mahendra.kumar.durg@gmail.com">
+            mahendra.kumar.durg@gmail.com
+          </a>
+        </strong>
+      </p>
+    </section>
+
+
+    <section>
+      <h2>12. Last Updated</h2>
+
+      <p>
+        Last updated: October 2026
+      </p>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+
+    <p>
+      © 2026 Ludo Master X. All rights reserved.
+    </p>
+
+    <p>
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="contact.html">Contact</a>
+    </p>
+
+  </footer>
 
 </body>
 </html>
