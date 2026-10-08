@@ -4,50 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ludo Master – Classic Offline Ludo Game</title>
-  <meta name="description" content="Ludo Master is a classic offline Ludo board game with smooth gameplay, colorful tokens and fun multiplayer modes.">
-  <meta name="theme-color" content="#0b1026">
+  <title>Privacy Policy – Ludo Master X</title>
 
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #080d20;
-      color: #ffffff;
-      line-height: 1.6;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #071426;
+      color: #eaf0f7;
+      line-height: 1.7;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1100px, 92%);
-      margin: auto;
-    }
-
-    /* NAVBAR */
+    /* Navigation */
     nav {
+      background: #091a2e;
+      border-bottom: 1px solid #193653;
+      padding: 16px 20px;
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(8, 13, 32, 0.94);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-    .nav-inner {
-      min-height: 70px;
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -55,266 +39,111 @@
     }
 
     .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 22px;
-      font-weight: 800;
-    }
-
-    .logo-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      object-fit: cover;
+      color: #ffd54a;
+      font-size: 21px;
+      font-weight: bold;
+      text-decoration: none;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 25px;
-      font-size: 14px;
-      color: #d7dcf5;
-    }
-
-    .nav-links a:hover {
-      color: #ffffff;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 90px 0 80px;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(50,90,255,0.25), transparent 35%),
-        radial-gradient(circle at 80% 30%, rgba(255,190,40,0.13), transparent 30%);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 7px 13px;
-      border-radius: 30px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #dfe5ff;
-      font-size: 13px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 1.05;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 span {
-      color: #ffd34d;
-    }
-
-    .hero-text {
-      max-width: 620px;
-      color: #b9c1df;
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 14px;
+      gap: 22px;
       flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 22px;
-      border-radius: 12px;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #ffd34d, #ffab22);
-      color: #15100a;
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(255,255,255,0.05);
-      color: white;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    /* HERO CARD */
-    .game-card {
-      padding: 15px;
-      border-radius: 30px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.15), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,255,255,0.13);
-      box-shadow: 0 25px 70px rgba(0,0,0,0.35);
-    }
-
-    .game-card img {
-      width: 100%;
-      display: block;
-      border-radius: 22px;
-    }
-
-    .placeholder {
-      aspect-ratio: 1 / 1;
-      border-radius: 22px;
-      display: flex;
-      align-items: center;
       justify-content: center;
-      text-align: center;
-      background:
-        radial-gradient(circle, #263b86, #111735 65%, #090d20);
-      color: #ffffff;
-      font-size: 80px;
     }
 
-    /* FEATURES */
-    section {
-      padding: 80px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: #aeb7d5;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .feature {
-      padding: 28px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.045);
-      border: 1px solid rgba(255,255,255,0.09);
-    }
-
-    .feature-icon {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-
-    .feature h3 {
-      margin-bottom: 8px;
-    }
-
-    .feature p {
-      color: #aeb7d5;
+    .nav-links a {
+      color: #dbe7f3;
+      text-decoration: none;
       font-size: 15px;
     }
 
-    /* MODES */
-    .modes {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
+    .nav-links a:hover {
+      color: #ffd54a;
     }
 
-    .mode {
-      padding: 24px 15px;
+    /* Header */
+    header {
+      padding: 55px 20px;
       text-align: center;
+      background: linear-gradient(135deg, #0b1f3a, #102d52);
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
+    }
+
+    header p {
+      margin: 0;
+      color: #b9c7d8;
+      font-size: 17px;
+    }
+
+    /* Main */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: #0d2038;
+      padding: 26px;
+      margin-bottom: 20px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.045);
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid #193653;
     }
 
-    .mode strong {
-      display: block;
-      font-size: 28px;
-      color: #ffd34d;
-      margin-bottom: 5px;
+    h2 {
+      color: #ffd54a;
+      margin-top: 0;
     }
 
-    .mode span {
-      color: #b9c1df;
-      font-size: 14px;
+    section p {
+      color: #d5deea;
     }
 
-    /* ABOUT */
-    .about {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
+    a {
+      color: #66b3ff;
     }
 
-    .about p {
-      color: #b9c1df;
-      margin-top: 15px;
-    }
-
-    /* FOOTER */
+    /* Footer */
     footer {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 35px 0;
-      color: #9da6c5;
-      font-size: 14px;
+      text-align: center;
+      padding: 35px 20px;
+      color: #8fa3b8;
+      border-top: 1px solid #193653;
+      margin-top: 30px;
     }
 
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
+    footer a {
+      margin: 0 8px;
+      text-decoration: none;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
+    /* Mobile */
+    @media (max-width: 700px) {
 
-    .footer-links a:hover {
-      color: white;
-    }
-
-    /* MOBILE */
-    @media (max-width: 800px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .hero {
-        padding-top: 60px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .modes {
-        grid-template-columns: repeat(2, 1fr);
+      .nav-container {
+        flex-direction: column;
       }
 
       .nav-links {
-        display: none;
+        gap: 14px;
       }
 
-      h1 {
-        font-size: 48px;
+      header h1 {
+        font-size: 30px;
+      }
+
+      main {
+        margin-top: 25px;
+      }
+
+      section {
+        padding: 22px;
       }
     }
   </style>
@@ -322,203 +151,195 @@
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- Navigation -->
   <nav>
-    <div class="container nav-inner">
+    <div class="nav-container">
 
-      <a href="#" class="logo">
-        <div class="logo-icon">🎲</div>
-        <span>Ludo Master</span>
+      <a class="logo" href="index.html">
+        🎲 Ludo Master X
       </a>
 
       <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#modes">Modes</a>
-        <a href="#about">About</a>
-        <a href="privacy-policy.html">Privacy</a>
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
       </div>
 
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container hero-grid">
 
-      <div>
-        <div class="badge">🎮 Classic Ludo • Offline Game</div>
-
-        <h1>
-          Roll. Move.<br>
-          <span>Win.</span>
-        </h1>
-
-        <p class="hero-text">
-          Experience classic Ludo with smooth gameplay, colorful tokens,
-          realistic dice sounds and fun matches with friends or computer opponents.
-        </p>
-
-        <div class="buttons">
-          <a class="btn btn-primary" href="#about">
-            🎲 Discover the Game
-          </a>
-
-          <a class="btn btn-secondary" href="#features">
-            Explore Features
-          </a>
-        </div>
-      </div>
-
-      <div class="game-card">
-        <div class="placeholder">
-          🎲
-        </div>
-      </div>
-
-    </div>
+  <!-- Page Header -->
+  <header>
+    <h1>Privacy Policy</h1>
+    <p>Ludo Master X</p>
   </header>
 
-  <!-- FEATURES -->
-  <section id="features">
-    <div class="container">
 
-      <div class="section-title">
-        <h2>Built for Classic Ludo Fun</h2>
-        <p>Simple rules, smooth gameplay and a premium game experience.</p>
-      </div>
+  <!-- Content -->
+  <main>
 
-      <div class="features">
+    <section>
+      <h2>1. Introduction</h2>
 
-        <div class="feature">
-          <div class="feature-icon">🎲</div>
-          <h3>Realistic Dice</h3>
-          <p>
-            Enjoy satisfying dice rolls with smooth animation and responsive controls.
-          </p>
-        </div>
+      <p>
+        Welcome to Ludo Master X. This Privacy Policy explains how
+        information may be handled when you use our mobile game.
+      </p>
 
-        <div class="feature">
-          <div class="feature-icon">👥</div>
-          <h3>2–4 Players</h3>
-          <p>
-            Play classic Ludo with multiple player modes and local gameplay.
-          </p>
-        </div>
+      <p>
+        Ludo Master X is designed primarily as an offline Ludo game.
+        We respect your privacy and aim to handle information responsibly.
+      </p>
+    </section>
 
-        <div class="feature">
-          <div class="feature-icon">🤖</div>
-          <h3>Computer Opponents</h3>
-          <p>
-            Challenge computer players and enjoy Ludo even when friends aren't available.
-          </p>
-        </div>
 
-        <div class="feature">
-          <div class="feature-icon">🏆</div>
-          <h3>Classic Rules</h3>
-          <p>
-            Traditional Ludo gameplay including captures, safe cells and home finishes.
-          </p>
-        </div>
+    <section>
+      <h2>2. Information We Collect</h2>
 
-        <div class="feature">
-          <div class="feature-icon">📱</div>
-          <h3>Offline Gameplay</h3>
-          <p>
-            Play your matches without requiring an online multiplayer connection.
-          </p>
-        </div>
+      <p>
+        Ludo Master X does not require you to create an account or provide
+        your name, email address, phone number, or password to play the game.
+      </p>
 
-        <div class="feature">
-          <div class="feature-icon">✨</div>
-          <h3>Premium Experience</h3>
-          <p>
-            Colorful visuals, smooth movement and polished game effects.
-          </p>
-        </div>
+      <p>
+        The game does not require online multiplayer or a personal user
+        account for its core gameplay.
+      </p>
+    </section>
 
-      </div>
 
-    </div>
-  </section>
+    <section>
+      <h2>3. Advertising</h2>
 
-  <!-- MODES -->
-  <section id="modes">
-    <div class="container">
+      <p>
+        Ludo Master X may display advertisements using Google AdMob.
+        Google AdMob is a third-party advertising service.
+      </p>
 
-      <div class="section-title">
-        <h2>Choose Your Match</h2>
-        <p>Play your way.</p>
-      </div>
+      <p>
+        Depending on applicable settings, permissions, and Google's
+        services, advertising-related information may include device
+        information, advertising identifiers, approximate location
+        information, and information related to advertisements and
+        interactions with advertisements.
+      </p>
 
-      <div class="modes">
+      <p>
+        For more information about Google's practices, please review
+        Google's applicable privacy and advertising policies.
+      </p>
+    </section>
 
-        <div class="mode">
-          <strong>2</strong>
-          <span>Players</span>
-        </div>
 
-        <div class="mode">
-          <strong>3</strong>
-          <span>Players</span>
-        </div>
+    <section>
+      <h2>4. Third-Party Services</h2>
 
-        <div class="mode">
-          <strong>4</strong>
-          <span>Players</span>
-        </div>
+      <p>
+        Ludo Master X may use third-party services such as Google AdMob
+        to provide advertisements.
+      </p>
 
-        <div class="mode">
-          <strong>AI</strong>
-          <span>Computer Mode</span>
-        </div>
+      <p>
+        Third-party providers may process information according to their
+        own privacy policies and terms.
+      </p>
+    </section>
 
-      </div>
 
-    </div>
-  </section>
+    <section>
+      <h2>5. Offline Gameplay</h2>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
+      <p>
+        Ludo Master X is primarily designed for offline gameplay.
+        Core gameplay does not require an online account or online
+        multiplayer connection.
+      </p>
+    </section>
 
-      <div class="about">
 
-        <div class="section-title">
-          <h2>About Ludo Master</h2>
-        </div>
+    <section>
+      <h2>6. Children's Privacy</h2>
 
-        <p>
-          Ludo Master is a classic board game designed for players who love
-          simple rules, strategic moves and exciting dice rolls.
-        </p>
+      <p>
+        Ludo Master X does not knowingly collect personal information
+        directly from children.
+      </p>
 
-        <p>
-          Move your tokens around the board, capture opponents, reach home
-          and become the winner.
-        </p>
+      <p>
+        If you believe that personal information has been provided
+        unintentionally, please contact us so that we can consider
+        appropriate action.
+      </p>
+    </section>
 
-      </div>
 
-    </div>
-  </section>
+    <section>
+      <h2>7. Data Security</h2>
 
-  <!-- FOOTER -->
+      <p>
+        We take reasonable measures to protect information associated
+        with the application. However, no electronic storage or
+        transmission system can be guaranteed to be completely secure.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>8. Changes to This Privacy Policy</h2>
+
+      <p>
+        We may update this Privacy Policy from time to time.
+        Any updated version will be published on this page with a
+        revised date.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>9. Contact Us</h2>
+
+      <p>
+        If you have questions or concerns about this Privacy Policy
+        or Ludo Master X, please contact us at:
+      </p>
+
+      <p>
+        <strong>
+          <a href="mailto:mahendra.kumar.durg@gmail.com">
+            mahendra.kumar.durg@gmail.com
+          </a>
+        </strong>
+      </p>
+    </section>
+
+
+    <section>
+      <h2>10. Last Updated</h2>
+
+      <p>
+        Last updated: October 2026
+      </p>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
   <footer>
-    <div class="container footer-inner">
 
-      <div>
-        © 2026 Ludo Master. All rights reserved.
-      </div>
+    <p>
+      © 2026 Ludo Master X. All rights reserved.
+    </p>
 
-      <div class="footer-links">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms.html">Terms & Conditions</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <p>
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="contact.html">Contact</a>
+    </p>
 
-    </div>
   </footer>
 
 </body>
