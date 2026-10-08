@@ -19,6 +19,49 @@
       line-height: 1.7;
     }
 
+    nav {
+      background: #091a2e;
+      border-bottom: 1px solid #193653;
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: #ffd54a;
+      font-size: 21px;
+      font-weight: bold;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      color: #dbe7f3;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #ffd54a;
+    }
+
     header {
       padding: 55px 20px;
       text-align: center;
@@ -81,15 +124,6 @@
       word-break: break-word;
     }
 
-    ul {
-      color: #d5deea;
-      padding-left: 25px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
     .button {
       display: inline-block;
       margin-top: 10px;
@@ -106,6 +140,15 @@
       opacity: 0.9;
     }
 
+    ul {
+      color: #d5deea;
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
     footer {
       text-align: center;
       padding: 35px 20px;
@@ -118,21 +161,22 @@
       margin: 0 8px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+
+      .nav-container {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
       header h1 {
         font-size: 30px;
       }
 
-      main {
-        margin-top: 25px;
-      }
-
       .card {
         padding: 22px;
-      }
-
-      .email-box {
-        font-size: 14px;
       }
     }
   </style>
@@ -140,127 +184,140 @@
 
 <body>
 
-<header>
-  <h1>Contact Us</h1>
-  <p>Ludo Master X</p>
-</header>
+  <nav>
+    <div class="nav-container">
 
-<main>
+      <a class="logo" href="index.html">
+        🎲 Ludo Master X
+      </a>
 
-  <div class="card">
-    <h2>Get in Touch</h2>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
 
-    <p>
-      Have a question, suggestion, feedback, or problem with
-      <strong>Ludo Master X</strong>?
-      We'd love to hear from you.
-    </p>
+    </div>
+  </nav>
 
-    <p>
-      For support and general enquiries, please contact us at:
-    </p>
 
-    <div class="email-box">
-      <a href="mailto:mahendra.kumar.durg@gmail.com">
-        mahendra.kumar.durg@gmail.com
+  <header>
+    <h1>Contact Us</h1>
+    <p>Ludo Master X</p>
+  </header>
+
+
+  <main>
+
+    <div class="card">
+      <h2>Get in Touch</h2>
+
+      <p>
+        Have a question, suggestion, feedback, or problem with
+        <strong>Ludo Master X</strong>?
+        We'd love to hear from you.
+      </p>
+
+      <p>
+        For support and general enquiries, please contact us at:
+      </p>
+
+      <div class="email-box">
+        <a href="mailto:mahendra.kumar.durg@gmail.com">
+          mahendra.kumar.durg@gmail.com
+        </a>
+      </div>
+
+      <br>
+
+      <a
+        class="button"
+        href="mailto:mahendra.kumar.durg@gmail.com?subject=Ludo%20Master%20X%20Support"
+      >
+        Email Support
       </a>
     </div>
 
-    <br>
 
-    <a
-      class="button"
-      href="mailto:mahendra.kumar.durg@gmail.com?subject=Ludo%20Master%20X%20Support"
-    >
-      Email Support
-    </a>
-  </div>
+    <div class="card">
+      <h2>App Support</h2>
+
+      <p>
+        If you experience a technical problem with Ludo Master X,
+        please include:
+      </p>
+
+      <ul>
+        <li>Your device model</li>
+        <li>Android version</li>
+        <li>Ludo Master X app version</li>
+        <li>A short description of the problem</li>
+        <li>A screenshot, if helpful</li>
+      </ul>
+    </div>
 
 
-  <div class="card">
-    <h2>App Support</h2>
+    <div class="card">
+      <h2>Privacy Questions</h2>
+
+      <p>
+        For privacy-related questions, please review our Privacy Policy.
+      </p>
+
+      <a class="button" href="privacy-policy.html">
+        View Privacy Policy
+      </a>
+    </div>
+
+
+    <div class="card">
+      <h2>Terms & Conditions</h2>
+
+      <p>
+        You can read our Terms & Conditions for information about
+        using Ludo Master X.
+      </p>
+
+      <a class="button" href="terms.html">
+        View Terms & Conditions
+      </a>
+    </div>
+
+
+    <div class="card">
+      <h2>Feedback & Suggestions</h2>
+
+      <p>
+        We welcome your feedback and suggestions. Your ideas can help
+        us improve Ludo Master X.
+      </p>
+
+      <a
+        class="button"
+        href="mailto:mahendra.kumar.durg@gmail.com?subject=Ludo%20Master%20X%20Feedback"
+      >
+        Send Feedback
+      </a>
+    </div>
+
+  </main>
+
+
+  <footer>
 
     <p>
-      If you experience a technical problem with Ludo Master X,
-      please include the following information in your email:
+      © 2026 Ludo Master X. All rights reserved.
     </p>
-
-    <ul>
-      <li>Your device model</li>
-      <li>Android version</li>
-      <li>Ludo Master X app version</li>
-      <li>A short description of the problem</li>
-      <li>A screenshot, if helpful</li>
-    </ul>
 
     <p>
-      Providing these details can help us understand and resolve the issue
-      more efficiently.
-    </p>
-  </div>
-
-
-  <div class="card">
-    <h2>Privacy Questions</h2>
-
-    <p>
-      If you have questions about privacy, data, advertising, or information
-      used by Ludo Master X, please review our Privacy Policy.
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="contact.html">Contact</a>
     </p>
 
-    <a class="button" href="privacy-policy.html">
-      View Privacy Policy
-    </a>
-  </div>
-
-
-  <div class="card">
-    <h2>Terms & Conditions</h2>
-
-    <p>
-      Please review our Terms & Conditions for information about using
-      Ludo Master X.
-    </p>
-
-    <a class="button" href="terms.html">
-      View Terms & Conditions
-    </a>
-  </div>
-
-
-  <div class="card">
-    <h2>Feedback & Suggestions</h2>
-
-    <p>
-      We welcome your feedback and suggestions. Your ideas can help us
-      improve Ludo Master X and make the game better for players.
-    </p>
-
-    <a
-      class="button"
-      href="mailto:mahendra.kumar.durg@gmail.com?subject=Ludo%20Master%20X%20Feedback"
-    >
-      Send Feedback
-    </a>
-  </div>
-
-</main>
-
-
-<footer>
-
-  <p>
-    © 2026 Ludo Master X. All rights reserved.
-  </p>
-
-  <p>
-    <a href="index.html">Home</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="terms.html">Terms & Conditions</a>
-    <a href="contact.html">Contact</a>
-  </p>
-
-</footer>
+  </footer>
 
 </body>
 </html>
