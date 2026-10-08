@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ludo Master – Classic Offline Ludo Game</title>
+  <meta name="description" content="Ludo Master is a classic offline Ludo board game with smooth gameplay, colorful tokens and fun multiplayer modes.">
+  <meta name="theme-color" content="#0b1026">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080d20;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 13, 32, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      font-size: 14px;
+      color: #d7dcf5;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 90px 0 80px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(50,90,255,0.25), transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(255,190,40,0.13), transparent 30%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 7px 13px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #dfe5ff;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #ffd34d;
+    }
+
+    .hero-text {
+      max-width: 620px;
+      color: #b9c1df;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ffd34d, #ffab22);
+      color: #15100a;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.05);
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* HERO CARD */
+    .game-card {
+      padding: 15px;
+      border-radius: 30px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.15), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.13);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.35);
+    }
+
+    .game-card img {
+      width: 100%;
+      display: block;
+      border-radius: 22px;
+    }
+
+    .placeholder {
+      aspect-ratio: 1 / 1;
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        radial-gradient(circle, #263b86, #111735 65%, #090d20);
+      color: #ffffff;
+      font-size: 80px;
+    }
+
+    /* FEATURES */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #aeb7d5;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature {
+      padding: 28px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .feature-icon {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: #aeb7d5;
+      font-size: 15px;
+    }
+
+    /* MODES */
+    .modes {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .mode {
+      padding: 24px 15px;
+      text-align: center;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .mode strong {
+      display: block;
+      font-size: 28px;
+      color: #ffd34d;
+      margin-bottom: 5px;
+    }
+
+    .mode span {
+      color: #b9c1df;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+    .about {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about p {
+      color: #b9c1df;
+      margin-top: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 35px 0;
+      color: #9da6c5;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .modes {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#" class="logo">
+        <div class="logo-icon">🎲</div>
+        <span>Ludo Master</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#modes">Modes</a>
+        <a href="#about">About</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="badge">🎮 Classic Ludo • Offline Game</div>
+
+        <h1>
+          Roll. Move.<br>
+          <span>Win.</span>
+        </h1>
+
+        <p class="hero-text">
+          Experience classic Ludo with smooth gameplay, colorful tokens,
+          realistic dice sounds and fun matches with friends or computer opponents.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="#about">
+            🎲 Discover the Game
+          </a>
+
+          <a class="btn btn-secondary" href="#features">
+            Explore Features
+          </a>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="placeholder">
+          🎲
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Built for Classic Ludo Fun</h2>
+        <p>Simple rules, smooth gameplay and a premium game experience.</p>
+      </div>
+
+      <div class="features">
+
+        <div class="feature">
+          <div class="feature-icon">🎲</div>
+          <h3>Realistic Dice</h3>
+          <p>
+            Enjoy satisfying dice rolls with smooth animation and responsive controls.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">👥</div>
+          <h3>2–4 Players</h3>
+          <p>
+            Play classic Ludo with multiple player modes and local gameplay.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🤖</div>
+          <h3>Computer Opponents</h3>
+          <p>
+            Challenge computer players and enjoy Ludo even when friends aren't available.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🏆</div>
+          <h3>Classic Rules</h3>
+          <p>
+            Traditional Ludo gameplay including captures, safe cells and home finishes.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <h3>Offline Gameplay</h3>
+          <p>
+            Play your matches without requiring an online multiplayer connection.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">✨</div>
+          <h3>Premium Experience</h3>
+          <p>
+            Colorful visuals, smooth movement and polished game effects.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODES -->
+  <section id="modes">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Choose Your Match</h2>
+        <p>Play your way.</p>
+      </div>
+
+      <div class="modes">
+
+        <div class="mode">
+          <strong>2</strong>
+          <span>Players</span>
+        </div>
+
+        <div class="mode">
+          <strong>3</strong>
+          <span>Players</span>
+        </div>
+
+        <div class="mode">
+          <strong>4</strong>
+          <span>Players</span>
+        </div>
+
+        <div class="mode">
+          <strong>AI</strong>
+          <span>Computer Mode</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+
+      <div class="about">
+
+        <div class="section-title">
+          <h2>About Ludo Master</h2>
+        </div>
+
+        <p>
+          Ludo Master is a classic board game designed for players who love
+          simple rules, strategic moves and exciting dice rolls.
+        </p>
+
+        <p>
+          Move your tokens around the board, capture opponents, reach home
+          and become the winner.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+
+      <div>
+        © 2026 Ludo Master. All rights reserved.
+      </div>
+
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
