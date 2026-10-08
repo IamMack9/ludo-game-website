@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Privacy Policy – Ludo Master X</title>
 
   <style>
@@ -18,33 +19,80 @@
       line-height: 1.7;
     }
 
+    /* Navigation */
+    nav {
+      background: #091a2e;
+      border-bottom: 1px solid #193653;
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: #ffd54a;
+      font-size: 21px;
+      font-weight: bold;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      color: #dbe7f3;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #ffd54a;
+    }
+
+    /* Header */
     header {
-      padding: 40px 20px;
+      padding: 55px 20px;
       text-align: center;
       background: linear-gradient(135deg, #0b1f3a, #102d52);
     }
 
     header h1 {
       margin: 0 0 10px;
-      font-size: 34px;
+      font-size: 36px;
     }
 
     header p {
       margin: 0;
       color: #b9c7d8;
+      font-size: 17px;
     }
 
+    /* Main */
     main {
       max-width: 900px;
-      margin: 30px auto;
+      margin: 40px auto;
       padding: 0 20px;
     }
 
     section {
       background: #0d2038;
-      padding: 24px;
+      padding: 26px;
       margin-bottom: 20px;
-      border-radius: 16px;
+      border-radius: 18px;
       border: 1px solid #193653;
     }
 
@@ -53,156 +101,246 @@
       margin-top: 0;
     }
 
+    section p {
+      color: #d5deea;
+    }
+
     a {
       color: #66b3ff;
     }
 
+    /* Footer */
     footer {
       text-align: center;
-      padding: 30px 20px;
+      padding: 35px 20px;
       color: #8fa3b8;
+      border-top: 1px solid #193653;
+      margin-top: 30px;
+    }
+
+    footer a {
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+
+      .nav-container {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      header h1 {
+        font-size: 30px;
+      }
+
+      main {
+        margin-top: 25px;
+      }
+
+      section {
+        padding: 22px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Privacy Policy</h1>
-  <p>Ludo Master X</p>
-</header>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
 
-<main>
+      <a class="logo" href="index.html">
+        🎲 Ludo Master X
+      </a>
 
-<section>
-  <h2>1. Introduction</h2>
-  <p>
-    Welcome to Ludo Master X. This Privacy Policy explains how information
-    may be handled when you use our mobile game.
-  </p>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
 
-  <p>
-    Ludo Master X is designed as an offline Ludo game. We respect your privacy
-    and aim to collect only information that is necessary for providing,
-    improving, and supporting the app.
-  </p>
-</section>
+    </div>
+  </nav>
 
-<section>
-  <h2>2. Information We Collect</h2>
 
-  <p>
-    Ludo Master X does not require you to create an account or provide your
-    name, email address, phone number, or password to play the game.
-  </p>
+  <!-- Page Header -->
+  <header>
+    <h1>Privacy Policy</h1>
+    <p>Ludo Master X</p>
+  </header>
 
-  <p>
-    The game does not require online multiplayer or a personal user account.
-  </p>
-</section>
 
-<section>
-  <h2>3. Advertising</h2>
+  <!-- Content -->
+  <main>
 
-  <p>
-    Ludo Master X may display advertisements using Google AdMob.
-    AdMob is provided by Google and may collect or use certain information
-    according to Google's policies.
-  </p>
+    <section>
+      <h2>1. Introduction</h2>
 
-  <p>
-    Advertising-related information may include device information,
-    advertising identifiers, approximate location information, and
-    information related to advertisements and interactions with them,
-    depending on Google's services and applicable settings.
-  </p>
+      <p>
+        Welcome to Ludo Master X. This Privacy Policy explains how
+        information may be handled when you use our mobile game.
+      </p>
 
-  <p>
-    For more information, please review Google's privacy policy and
-    advertising policies.
-  </p>
-</section>
+      <p>
+        Ludo Master X is designed primarily as an offline Ludo game.
+        We respect your privacy and aim to handle information responsibly.
+      </p>
+    </section>
 
-<section>
-  <h2>4. Third-Party Services</h2>
 
-  <p>
-    The app may use third-party services such as Google AdMob for displaying
-    advertisements.
-  </p>
+    <section>
+      <h2>2. Information We Collect</h2>
 
-  <p>
-    These third-party providers may process information according to their
-    own privacy policies.
-  </p>
-</section>
+      <p>
+        Ludo Master X does not require you to create an account or provide
+        your name, email address, phone number, or password to play the game.
+      </p>
 
-<section>
-  <h2>5. Offline Gameplay</h2>
+      <p>
+        The game does not require online multiplayer or a personal user
+        account for its core gameplay.
+      </p>
+    </section>
 
-  <p>
-    Ludo Master X is primarily designed for offline gameplay. Core gameplay
-    does not require an account or online multiplayer connection.
-  </p>
-</section>
 
-<section>
-  <h2>6. Children's Privacy</h2>
+    <section>
+      <h2>3. Advertising</h2>
 
-  <p>
-    Ludo Master X is not intended to knowingly collect personal information
-    from children.
-  </p>
+      <p>
+        Ludo Master X may display advertisements using Google AdMob.
+        Google AdMob is a third-party advertising service.
+      </p>
 
-  <p>
-    If you believe that personal information has been provided to us
-    unintentionally, please contact us so that appropriate action can be
-    considered.
-  </p>
-</section>
+      <p>
+        Depending on applicable settings, permissions, and Google's
+        services, advertising-related information may include device
+        information, advertising identifiers, approximate location
+        information, and information related to advertisements and
+        interactions with advertisements.
+      </p>
 
-<section>
-  <h2>7. Data Security</h2>
+      <p>
+        For more information about Google's practices, please review
+        Google's applicable privacy and advertising policies.
+      </p>
+    </section>
 
-  <p>
-    We take reasonable steps to protect information associated with the app.
-    However, no electronic transmission or storage system can be guaranteed
-    to be completely secure.
-  </p>
-</section>
 
-<section>
-  <h2>8. Changes to This Privacy Policy</h2>
+    <section>
+      <h2>4. Third-Party Services</h2>
 
-  <p>
-    We may update this Privacy Policy from time to time. Any updated version
-    will be published on this page with the revised date.
-  </p>
-</section>
+      <p>
+        Ludo Master X may use third-party services such as Google AdMob
+        to provide advertisements.
+      </p>
 
-<section>
-  <h2>9. Contact Us</h2>
+      <p>
+        Third-party providers may process information according to their
+        own privacy policies and terms.
+      </p>
+    </section>
 
-  <p>
-    If you have questions or concerns about this Privacy Policy or Ludo
-    Master X, you can contact us through the contact information provided
-    on our website.
-  </p>
-</section>
 
-<section>
-  <h2>10. Last Updated</h2>
+    <section>
+      <h2>5. Offline Gameplay</h2>
 
-  <p>
-    Last updated: October 2026
-  </p>
-</section>
+      <p>
+        Ludo Master X is primarily designed for offline gameplay.
+        Core gameplay does not require an online account or online
+        multiplayer connection.
+      </p>
+    </section>
 
-</main>
 
-<footer>
-  © 2026 Ludo Master X. All rights reserved.
-</footer>
+    <section>
+      <h2>6. Children's Privacy</h2>
+
+      <p>
+        Ludo Master X does not knowingly collect personal information
+        directly from children.
+      </p>
+
+      <p>
+        If you believe that personal information has been provided
+        unintentionally, please contact us so that we can consider
+        appropriate action.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>7. Data Security</h2>
+
+      <p>
+        We take reasonable measures to protect information associated
+        with the application. However, no electronic storage or
+        transmission system can be guaranteed to be completely secure.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>8. Changes to This Privacy Policy</h2>
+
+      <p>
+        We may update this Privacy Policy from time to time.
+        Any updated version will be published on this page with a
+        revised date.
+      </p>
+    </section>
+
+
+    <section>
+      <h2>9. Contact Us</h2>
+
+      <p>
+        If you have questions or concerns about this Privacy Policy
+        or Ludo Master X, please contact us at:
+      </p>
+
+      <p>
+        <strong>
+          <a href="mailto:mahendra.kumar.durg@gmail.com">
+            mahendra.kumar.durg@gmail.com
+          </a>
+        </strong>
+      </p>
+    </section>
+
+
+    <section>
+      <h2>10. Last Updated</h2>
+
+      <p>
+        Last updated: October 2026
+      </p>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+
+    <p>
+      © 2026 Ludo Master X. All rights reserved.
+    </p>
+
+    <p>
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="contact.html">Contact</a>
+    </p>
+
+  </footer>
 
 </body>
 </html>
